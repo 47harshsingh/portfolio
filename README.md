@@ -6,6 +6,7 @@
 
 A/B Testing & Experiment Analysis · AI Automation with n8n & LLM APIs · B.Tech Computer Engineering ’26
 
+[![Live website](https://img.shields.io/badge/Live%20website-harsh--singh--analyst.vercel.app-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://harsh-singh-analyst.vercel.app)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Harsh%20Singh-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/harsh-singh-4836ab31a/)
 [![Email](https://img.shields.io/badge/Email-hsp1112003%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:hsp1112003@gmail.com)
 
@@ -104,7 +105,7 @@ A multi-agent workflow in n8n that handles email, calendar and meeting-notes tas
 
 ## About this website
 
-This repository is the source code of my portfolio website.
+This repository is the source code of my portfolio website — live at **[harsh-singh-analyst.vercel.app](https://harsh-singh-analyst.vercel.app)**.
 
 **Built with:** Next.js · React · TypeScript · Tailwind CSS · Motion · hosted on Vercel
 
@@ -122,6 +123,6 @@ Then open http://localhost:3000. All site text lives in `src/lib/content.ts`.
 
 <div align="center">
 
-**Let's talk →** [hsp1112003@gmail.com](mailto:hsp1112003@gmail.com) · [LinkedIn](https://www.linkedin.com/in/harsh-singh-4836ab31a/)
+**Let's talk →** [Live website](https://harsh-singh-analyst.vercel.app) · [hsp1112003@gmail.com](mailto:hsp1112003@gmail.com) · [LinkedIn](https://www.linkedin.com/in/harsh-singh-4836ab31a/)
 
 </div>
