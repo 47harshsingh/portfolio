@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-ink: #050505;
+  --color-panel: #0c0c0d;
+  --color-line: rgb(255 255 255 / 0.08);
+  --color-muted: rgb(255 255 255 / 0.55);
+  --color-faint: rgb(255 255 255 / 0.35);
+  --color-accent: #2dd4bf;
+  --color-good: #34d399;
+  --color-warn: #fbbf24;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  background: var(--color-ink);
+  color: #fff;
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+
+body {
+  background: var(--color-ink);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #000;
+}
+
+/* Faint grid that fades out towards the edges */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.06) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, #000 30%, transparent 100%);
+}
+
+/* Silver heading text, like brushed metal */
+.text-metal {
+  background: linear-gradient(180deg, #ffffff 20%, #9a9a9f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Glass card */
+.glass {
+  background: linear-gradient(180deg, rgb(255 255 255 / 0.045), rgb(255 255 255 / 0.015));
+  border: 1px solid var(--color-line);
+  backdrop-filter: blur(12px);
+}
+
+/* Infinite marquee */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+}
+.marquee-mask {
+  mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+}
+
+/* Intro loader: pure CSS so the page can never get stuck behind it */
+@keyframes loader-out {
+  0%, 70% { opacity: 1; visibility: visible; }
+  100% { opacity: 0; visibility: hidden; }
+}
+@keyframes key-in {
+  0% { opacity: 0; transform: translateY(18px) rotateX(55deg) scale(0.8); }
+  60% { opacity: 1; transform: translateY(-3px) rotateX(0) scale(1.04); }
+  100% { opacity: 1; transform: translateY(0) rotateX(0) scale(1); }
+}
+.loader {
+  animation: loader-out 1.4s ease forwards;
+}
+.loader-key {
+  animation: key-in 0.55s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+/* Soft pulse for the "open to work" dot */
+@keyframes ping-soft {
+  0% { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(2.6); opacity: 0; }
+}
+.animate-ping-soft {
+  animation: ping-soft 1.8s ease-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .animate-marquee,
+  .animate-ping-soft { animation: none; }
+  .loader { display: none; }
+}
